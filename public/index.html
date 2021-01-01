@@ -88,6 +88,15 @@ var dbRef = firebase.database() // connecting to firebase database
 // this callback function will apply the value of our database refernce to our div's inner text
 dbRef.on('value', (snapshot) => message.innerText = snapshot.val());
 </script>
+teacher.set({
+  class: 'JS Applications',
+  name: 'Shane',
+  computer: {
+    type: 'mac',
+    size: '15 inch'
+  }
+});
 
+var ShanesComputer = dbRef.child('teacher/computer');
   </body>
 </html>
